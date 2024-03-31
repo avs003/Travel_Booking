@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyBooking</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <header>
+        <div class="brand">
+            <img src="/images/eb_logo1-removebg-preview.png" alt="logonotfound" id="logoImage">
+            <h1>EasyBooking</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Book</a></li>
+                <li>
+                    <a href="#">Packages</a>
+                    <ul>
+                        <li><a href="#">United States</a></li>
+                        <li><a href="#">India</a></li>
+                        <li><a href="#">France</a></li>
+                        <li><a href="#">Germany</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+        </nav>
+        <div class="login-register">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">
+                Login
+            </button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                data-bs-target="#registerModal">Register</button>
+        </div>
+    </header>
+    <div class="background-image">
+        <div class="heading1">Welcome to EasyBooking</div>
+        <h2><span id="changeCountry">Visit </span></h2>
+        <a href="#" class="book-now-button">Book Now</a>
+    </div>
+    <div class="row">
+        <!-- Left section with brand image -->
+        <div class="col-6">
+            <img src="images/website logo.png" alt="Brand Image">
+        </div>
+        <!-- Right section with booking form -->
+        <div class="col-6">
+            <form id="bookingForm">
+                <label for="destination">Where to:</label>
+                <select id="destination" name="destination">
+                    <option value="sample1">Singapore</option>
+                    <option value="sample2">New Zealand</option>
+                    <option value="sample3">Russia</option>
+                    <!-- Add more sample places as needed -->
+                </select>
+                <label for="persons">How Many Persons:</label>
+                <input type="number" id="persons" name="persons" min="1"><br>
+                <label for="startDate">Start Date:</label>
+                <input type="date" id="startDate" name="startDate"><br>
+                <label for="endDate">End Date:</label>
+                <input type="date" id="endDate" name="endDate" min=><br>
+                <label for="description">Description:</label><br>
+                <textarea id="description" name="description" rows="4" cols="50" minlength="50"
+                    maxlength="500"></textarea><br>
+                <button type="submit" class="book-now-button">Book Now</button>
+            </form>
+        </div>
+    </div><br>
+    <section class="package-gallery">
+        <div class="flex-container">
+            <div class="package-card" id="box1">
+                <img src="images/australia.jpg" alt="Package 1">
+                <h3>Australia</h3>
+                <p>Start planning your trip to australia.So, you've decided to visit Australia? Great choice! Let's
+                    start planning your ultimate holiday.</p>
+                <div class="rating">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bx-star"></i>
+                </div>
+                <p class="price">Price: $100</p>
+                <button class="book-now-button">Book Now</button>
+            </div>
+            <div class="package-card" id="box2">
+                <img src="images/new_zealand.jpg" alt="Package 2">
+                <h3>New Zealand</h3>
+                <p>Across our incredible country, you can find everything from untamed wilderness to rich culture.
+                    There's more to find in Aotearoa New Zealand.</p>
+                <div class="rating">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bx-star"></i>
+                </div>
+                <p class="price">Price: $120</p>
+                <button class="book-now-button">Book Now</button>
+            </div>
+            <div class="package-card" id="box3">
+                <img src="images/russia.jpg" alt="Package 3">
+                <h3>Russia</h3>
+                <p>Discover the Heartbeat of Russia: Where Heritage Meets Adventure</p>
+                <div class="rating">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bx-star"></i>
+                </div>
+                <p class="price">Price: $150</p>
+                <button class="book-now-button">Book Now</button>
+            </div>
+        </div>
+        <div class="flex-container">
+            <div class="package-card" id="box1">
+                <img src="images/sri_lanka.jpg" alt="Package 4">
+                <h3>Srilanka</h3>
+                <p>Embark on an unforgettable journey through Sri Lanka's rich tapestry of culture, lush landscapes, and
+                    pristine beaches.</p>
+                <div class="rating">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bx-star"></i>
+                </div>
+                <p class="price">Price: $200</p>
+                <button class="book-now-button">Book Now</button>
+            </div>
+            <div class="package-card" id="box2">
+                <img src="images/england.jpeg" alt="Package 5">
+                <h3>England</h3>
+                <p>England: A tapestry of tradition and modernity, where history's whispers blend with tomorrow's
+                    dreams.</p>
+                <div class="rating">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bx-star"></i>
+                </div>
+                <p class="price">Price: $180</p>
+                <button class="book-now-button">Book Now</button>
+            </div>
+            <div class="package-card" id="box3">
+                <img src="images/malayasia.jpg" alt="Package 6">
+                <h3>Malasyia</h3>
+                <p>
+                    Malaysia, a vibrant Southeast Asian nation, boasts diverse cultures, stunning landscapes, and a
+                    blend of modernity with rich traditions.</p>
+                <div class="rating">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bx-star"></i>
+                </div>
+                <p class="price">Price: $220</p>
+                <button class="book-now-button">Book Now</button>
+            </div>
+        </div>
+        <div class="flex-container">
+            <div class="package-card" id="box1">
+                <img src="images/afghanistan.png" alt="Package 7">
+                <h3>Afghanistan</h3>
+                <p>Land of ancient tales and enduring strength, where the echoes of history meet the whispers of hope in
+                    every mountain breeze.</p>
+                <div class="rating">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bx-star"></i>
+                </div>
+                <p class="price">Price: $250</p>
+                <button class="book-now-button">Book Now</button>
+            </div>
+            <div class="package-card" id="box2">
+                <img src="images/brazil.jpg" alt="Package 8">
+                <h3>Brazil</h3>
+                <p>Brazil: Where the Amazon's embrace meets the pulse of samba, inviting you to experience the rhythm of
+                    adventure and the soul of passion.</p>
+                <div class="rating">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bx-star"></i>
+                </div>
+                <p class="price">Price: $190</p>
+                <button class="book-now-button">Book Now</button>
+            </div>
+            <div class="package-card" id="box3">
+                <img src="images/chille.jpg" alt="Package 9">
+                <h3>Chille</h3>
+                <p>Chile: Where rugged landscapes meet vibrant culture, inviting you to explore the extraordinary at
+                    every step.</p>
+                <div class="rating">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bx-star"></i>
+                </div>
+                <p class="price">Price: $280</p>
+                <button class="book-now-button">Book Now</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="services-section">
+        <div class="services-container">
+            <h2>Our Services</h2>
+            <div class="services-columns">
+                <ul class="services-list">
+                    <li>Affordable Hotel</li>
+                    <li>Food & Drinks</li>
+                    <li>Safety Guide</li>
+                </ul>
+                <ul class="services-list">
+                    <li>Transportation Assistance</li>
+                    <li>24/7 Customer Support</li>
+                    <li>Local Tour Guides</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery-section">
+        <h1>Gallery</h1>
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <img src="images/photo.jpg" alt="Gallery Image 1">
+            </div>
+            <div class="gallery-item">
+                <img src="images/photo_2.jpg" alt="Gallery Image 2">
+            </div>
+            <div class="gallery-item">
+                <img src="images/photo_3.jpg" alt="Gallery Image 1">
+            </div>
+            <div class="gallery-item">
+                <img src="images/photo_4.jpg" alt="Gallery Image 2">
+            </div>
+            <!-- Add more gallery items as needed -->
+        </div>
+    </section>
+
+    <section class="about-us-section">
+        <div class="row">
+            <div class="col-6">
+                <img src="images/brazil.jpg" alt="Company Image">
+            </div>
+            <div class="col-6">
+                <div class="company-info">
+                    <h2>About Us</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra lectus quis leo ullamcorper,
+                        ac interdum mi bibendum. In id urna justo.</p>
+                    <p>Our company was established in [2024] with a mission to provide exceptional travel experiences to
+                        our customers. Over the years, we have built a reputation for excellence and reliability in the
+                        travel industry.</p>
+                    <p>For inquiries or bookings, please contact us at info@easybooking.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- The modal -->
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="registerModalLabel">Register</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Register form goes here -->
+                    <form id="registerForm">
+                        <div class="mb-3">
+                            <label for="fullname" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="fullname" name="fullname" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="contact" class="form-label">Contact</label>
+                            <input type="tel" class="form-control" id="contact" name="contact" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="dob" class="form-label">Date of Birth</label>
+                            <input type="date" class="form-control" id="dob" name="dob" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" name="password" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="gender" class="form-label">Gender</label>
+                            <select class="form-select" id="gender" name="gender" required>
+                                <option value="">Select</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <button type="submit" class="btn btn-primary">Register</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <p>Already have an account? <a href="login.html">Login</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- The modal -->
+<!-- The modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Login form goes here -->
+                <form id="loginForm">
+                    <div class="mb-3">
+                        <label for="loginEmail" class="form-label">Email Address</label>
+                        <input type="email" class="form-control" id="loginEmail" name="loginEmail" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="loginPassword" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="loginPassword" name="loginPassword" required>
+                    </div>
+                    <div class="mb-3">
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <p>Don't have an account? <a href="register.html">Register</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <footer class="footer-section">
+        <div class="footer-container">
+            <div class="brand-name">EasyBooking</div>
+            <div class="social-media">
+                <a href="#" class="social-icon"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="bx bxl-facebook"></i></a>
+                <!-- Add more social media icons as needed -->
+            </div>
+            <div class="copyright">© 2024 EasyBooking. All Rights Reserved.</div>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

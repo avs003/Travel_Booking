@@ -1,0 +1,480 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #D7CFF6;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+}
+
+.brand img {
+    width: 150px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 2px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+    position: relative;
+}
+
+nav ul li:hover ul {
+    display: block;
+    background-color: #4E598C;
+    border-radius: 5px;
+
+}
+
+nav ul ul li:hover a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+nav ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+nav ul ul li {
+    width: 120px;
+    white-space: nowrap;
+    padding: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.login-register {
+    display: flex;
+    align-items: center;
+}
+
+.login-register button {
+    margin-left: 20px;
+    padding: 8px 16px;
+    background-color: #ffffff;
+    color: #1541d3;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.background-image {
+    width: 100%;
+    height: 90vh;
+    background-image: url('images/209178-Australia.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #EBDAF3;
+    font-family: cursive;
+    font-size: x-large;
+    font-weight: bold;
+    text-align: center;
+}
+
+.heading1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.heading2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+#changeCountry {
+    color: #EBDAF3;
+    ;
+    text-shadow: whitesmoke;
+}
+
+#changeCountry:after {
+    content: "";
+    animation-name: changeCountrynames;
+    animation-duration: 4s;
+    animation-timing-function: ease;
+    animation-delay: 2s;
+    animation-direction: normal;
+    animation-iteration-count: infinite;
+}
+
+@keyframes changeCountrynames {
+    0% {
+        content: "Australia";
+    }
+
+    25% {
+        content: "France";
+    }
+
+    50% {
+        content: "France";
+    }
+
+    75% {
+        content: "Germany";
+    }
+
+    100% {
+        content: "America";
+    }
+}
+
+
+.book-now-button {
+    padding: 10px 20px;
+    background-color: #706275;
+    color: #FDCC87;
+    text-decoration: none;
+    border: none;
+    font-size: 1.2em;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.book-now-button:hover {
+    color: black;
+    background-color: whitesmoke;
+    border-radius: 10px;
+}
+
+.logoImage {
+    width: 10px;
+    height: 100px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    width: auto;
+    height: auto;
+    background-color: whitesmoke;
+    justify-content: space-around;
+}
+
+.col-6 {
+    color: #1541d3;
+    width: 50%;
+    height: auto;
+    padding: 20px;
+    /* justify-content: flex-start; */
+    box-sizing: border-box;
+    position: relative;
+    top: 10px;
+}
+
+.col-6 img {
+    width: 100%;
+    /* Make the image fill the entire column width */
+    height: 90%;
+    /* Maintain aspect ratio */
+    border-radius: 5px;
+    /* Optional: Add border radius to the image */
+}
+
+form {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="date"],
+form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+form textarea {
+    height: 100px;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #706275;
+    color: #FDCC87;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #554a4e;
+    color: #fff;
+}
+
+
+/* row */
+
+.package-gallery {
+    display: block;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    background-color: #9badff;
+    position: relative;
+    top: 0px;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    background-color: #fec6fd;
+    position: relative;
+    top: 10px;
+}
+
+.package-card {
+    width: calc(100% / 3 - 10px);
+    /* Subtracting margin */
+    margin-right: 5px;
+    /* Adjust according to your gap */
+    background-color:whitesmoke;
+    padding: 10px;
+    border-radius: 1px;
+    box-shadow: 0 0 10px rgba(225, 156, 156, 0.1);
+    box-sizing: border-box;
+    /* Include padding and border in width calculation */
+    margin-bottom: 10px;
+    /* Adjust spacing between cards */
+}
+
+.package-card img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.package-card h3 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.package-card p {
+    margin-bottom: 10px;
+}
+
+.package-card .price {
+    font-weight: bold;
+}
+
+.package-card .rating {
+    font-style: italic;
+}
+
+.package-card button {
+    padding: 10px 20px;
+    background-color: #706275;
+    color: #FDCC87;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.package-card button:hover {
+    background-color: #554a4e;
+    color: #fff;
+}
+
+.services-section {
+    background-color: #c9a3f8;
+    padding: 20px 0;
+}
+
+.services-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.services-container h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: whitesmoke
+}
+
+.services-columns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.services-list {
+    list-style: disc;
+    padding: 0;
+    margin: 0;
+    width: 48%;
+    /* Adjust width for spacing */
+}
+
+.services-list li {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: whitesmoke;
+}
+
+.gallery-section {
+    background-color: #FFFFFF; /* Adjust background color as needed */
+    padding: 50px 0;
+    text-align: center;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.1); /* Scale up the image on hover */
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+}
+
+.about-us-section {
+    padding: 50px 0;
+    background-color: #f9f9f9; /* Adjust background color as needed */
+}
+
+.about-us-section .row {
+    display: flex;
+}
+
+.about-us-section .col-6 {
+    width: 50%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.about-us-section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.company-info {
+    text-align: left;
+}
+
+.company-info h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.company-info p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+
+/* use section */
+
+
+/* footer */
+.footer-section {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.brand-name {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.social-media {
+    margin-right: 20px;
+}
+
+.social-icon {
+    color: #fff;
+    font-size: 24px;
+    margin: 0 5px;
+}
+
+.social-icon:hover {
+    color: #ccc;
+}
+
+.social-icon i {
+    transition: color 0.3s;
+}
+
+.social-icon:hover i {
+    color: #ccc;
+}
+
+.copyright {
+    font-size: 0.9em;
+}
